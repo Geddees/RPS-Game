@@ -1,6 +1,9 @@
-let rpsChoices = ["Rock", "Paper", "Scissors"]
+const rpsChoices = ["Rock", "Paper", "Scissors"]
 
 
 function getComputerChoice () {
-    Math.floor(Math.random)
+    let computerChoice = Math.floor(Math.random() * rpsChoices.length)
+    return rpsChoices[computerChoice];
 }
+
+console.log(getComputerChoice());
