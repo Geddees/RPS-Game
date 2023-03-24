@@ -10,12 +10,15 @@ function getComputerChoice () {
 /* Takes userInput and normalizes it for the game */
 function playerChoice (userInput) {
     userInput = prompt("Choose your weapon!");
+
     let beginningInput = userInput.slice(0,1).toUpperCase();
     let endingInput = userInput.slice(1).toLowerCase();
     let pchoice = (beginningInput + endingInput).toString();
     /* Check if userInput is valid */
+    
     if (pchoice !== "Rock" && pchoice !== "Paper" && pchoice !== "Scissors"){
-        return alert("Not a valid weapon warrior!");
+        alert("Not a valid weapon warrior!");
+        return playerChoice();
     } else {
         return pchoice;
     }
