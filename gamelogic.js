@@ -27,9 +27,7 @@ function playerChoice (userInput) {
 function game (getComputerChoice, playerChoice){
 /* Compare player and comp inputs */
     console.log(getComputerChoice, playerChoice);
-    if (playerChoice == undefined || playerChoice == null){
-        return
-    } else if (playerChoice === getComputerChoice) {
+    if (playerChoice === getComputerChoice) {
         return console.log("Draw! Select another weapon now!");      
     } else if ((playerChoice === "Rock" && getComputerChoice === "Scissors") 
                 || (playerChoice === "Scissors" && getComputerChoice === "Paper") 
