@@ -7,6 +7,9 @@ function getComputerChoice () {
     return rpsChoices[computerChoice];
 }
 
+
+
+
 /* Takes userInput and normalizes it for the game */
 function playerChoice (userInput) {
     userInput = prompt("Choose your weapon!");
@@ -37,5 +40,9 @@ function game (getComputerChoice, playerChoice){
         return console.log("You have been defeated... Pick yourself up warrior -- fight another day.");
     }
 }
+/* Add event listeners to the buttons */
+const buttons = document.querySelectorAll('.rpsButton');
+
+buttons.forEach(button => button.addEventListener("click", playerChoice))
 /* Run the Game! */
-game(getComputerChoice(), playerChoice());
+/* game(getComputerChoice(), playerChoice()); */
