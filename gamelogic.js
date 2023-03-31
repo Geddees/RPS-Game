@@ -8,19 +8,21 @@ function getComputerChoice () {
 }
 
 /* Takes userInput and normalizes it for the game */
-function playerChoice () {
-    const getId = this.getAttribute("id")
-    console.log(getId);
-}
+/* function pChoice () {
+    const getId = this.getAttribute("id");
+    return getId;
+} */
 
-function game (getComputerChoice, playerChoice){
+function game (){
 /* Compare player and comp inputs */
-    console.log(getComputerChoice, playerChoice);
-    if (playerChoice === getComputerChoice) {
+    const pChoice = this.getAttribute('id');
+    const cChoice = getComputerChoice();
+    console.log(pChoice + cChoice)
+    if (pChoice === cChoice) {
         return console.log("Draw! Select another weapon now!");      
-    } else if ((playerChoice === "Rock" && getComputerChoice === "Scissors") 
-                || (playerChoice === "Scissors" && getComputerChoice === "Paper") 
-                || (playerChoice === "Paper" && getComputerChoice === "Rock" )) {
+    } else if ((pChoice === "Rock" && cChoice === "Scissors") 
+                || (pChoice === "Scissors" && cChoice === "Paper") 
+                || (pChoice === "Paper" && cChoice === "Rock" )) {
         return console.log("You win warrior! A job well done.");
     } else {
         return console.log("You have been defeated... Pick yourself up warrior -- fight another day.");
@@ -29,9 +31,9 @@ function game (getComputerChoice, playerChoice){
 /* Add event listeners to the buttons */
 const buttons = document.querySelectorAll('.rpsButton');
 
-buttons.forEach(button => button.addEventListener("click", playerChoice))
+buttons.forEach(button => button.addEventListener("click", game))
 /* Run the Game! */
-/* game(getComputerChoice(), playerChoice()); */
+/* game(cChoice(), pChoice()); */
 
 
 /* Need to button => get id as player choice => pass choice to function game => 
