@@ -7,24 +7,10 @@ function getComputerChoice () {
     return rpsChoices[computerChoice];
 }
 
-
-
-
 /* Takes userInput and normalizes it for the game */
-function playerChoice (userInput) {
-    userInput = prompt("Choose your weapon!");
-
-    let beginningInput = userInput.slice(0,1).toUpperCase();
-    let endingInput = userInput.slice(1).toLowerCase();
-    let pchoice = (beginningInput + endingInput).toString();
-    /* Check if userInput is valid */
-    
-    if (pchoice !== "Rock" && pchoice !== "Paper" && pchoice !== "Scissors"){
-        alert("Not a valid weapon warrior!");
-        return playerChoice();
-    } else {
-        return pchoice;
-    }
+function playerChoice () {
+    const getId = this.getAttribute("id")
+    console.log(getId);
 }
 
 function game (getComputerChoice, playerChoice){
@@ -46,3 +32,9 @@ const buttons = document.querySelectorAll('.rpsButton');
 buttons.forEach(button => button.addEventListener("click", playerChoice))
 /* Run the Game! */
 /* game(getComputerChoice(), playerChoice()); */
+
+
+/* Need to button => get id as player choice => pass choice to function game => 
+    generate computer choice => compare and generate win/loss/tie => output 
+    win/loss to player => mark the w/l tracker
+*/
