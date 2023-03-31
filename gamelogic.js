@@ -6,18 +6,14 @@ function getComputerChoice () {
     let computerChoice = Math.floor(Math.random() * rpsChoices.length)
     return rpsChoices[computerChoice];
 }
-
-/* Takes userInput and normalizes it for the game */
-/* function pChoice () {
-    const getId = this.getAttribute("id");
-    return getId;
-} */
-
+/* Playing the game */
 function game (){
-/* Compare player and comp inputs */
+    /* Getting Player Choice */
     const pChoice = this.getAttribute('id');
+    /* Getting Computer Choice */
     const cChoice = getComputerChoice();
-    console.log(pChoice + cChoice)
+    console.log("Player: "+ pChoice +" Computer: " + cChoice)
+    /* Playing RPS by comparing player and computer choice */
     if (pChoice === cChoice) {
         return console.log("Draw! Select another weapon now!");      
     } else if ((pChoice === "Rock" && cChoice === "Scissors") 
@@ -30,10 +26,7 @@ function game (){
 }
 /* Add event listeners to the buttons */
 const buttons = document.querySelectorAll('.rpsButton');
-
 buttons.forEach(button => button.addEventListener("click", game))
-/* Run the Game! */
-/* game(cChoice(), pChoice()); */
 
 
 /* Need to button => get id as player choice => pass choice to function game => 
