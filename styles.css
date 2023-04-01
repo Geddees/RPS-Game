@@ -1,19 +1,53 @@
-.tracker {
+*{
+    margin: 0px;
+}
+body {
+    background-color: whitesmoke;
+}
+.gameContainer {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: ;
+    align-items: stretch;
+    background-color: blueviolet;
+    height: 100vh;
+    padding: 20px;
+}
+.title {
+    margin: 50px auto;
+    text-align: center;
+    font-size: 48px;
+    color: orange;
+    -webkit-text-stroke: .5px black;
+}
+.trackerContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    background-color: orange;
+    border-radius: 2em;
+}
+h2 {
+    text-align: center;
+}
+.tracker {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     gap: 20px;
 }
 
 .tracker > div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    flex: 1;
+    align-self: stretch;
+    min-width: 0px;
     height: 100px;
-    width: 100px;
-    border: 2px solid black;
+    border: 2px solid blueviolet;
     border-radius: 2em;
-
 }
+
 .gameWin {
     background-color: green;
 }
@@ -22,4 +56,26 @@
 }
 .hidden {
     display: none;
+}
+
+#scoreboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 50px;
+}
+#scoreboard > button {
+    flex: 1;
+    height: 150px;
+    width: 200px;
+    background-color: orange;
+    border-radius: 2em;
+    font-size: 24px;
+    font-weight: bold;
+}
+#Output {
+    margin: auto;
+    text-align: center;
+    font-size: 36px;
 }

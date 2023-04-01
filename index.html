@@ -9,19 +9,24 @@
 </head>
 <body>
     <script src="gamelogic.js" defer></script>
-    <h1>CHOOSE. YOUR. WEAPON.</h1>
-    <div class="tracker">
-        <div class="ready"></div>
-        <div class="ready"></div>
-        <div class="ready"></div>
-        <div class="ready"></div>
-        <div class="ready"></div>
-    </div>
-    <div id="scoreboard">
-        <button id="Rock" class="rpsButton">Rock</button>
-        <button id="Paper"class="rpsButton">Paper</button>
-        <button id="Scissors"class="rpsButton">Scissors</button>
-        <button class="anotherGame hidden">Play again?</button>
+    <div class="gameContainer">
+        <h1 class="title">CHOOSE. YOUR. WEAPON.</h1>
+        <div class="trackerContainer">
+            <h2>Win/Loss Tracker</h2>
+            <div class="tracker">
+                <div class="ready"></div>
+                <div class="ready"></div>
+                <div class="ready"></div>
+                <div class="ready"></div>
+                <div class="ready"></div>
+            </div>
+        </div>
+        <div id="scoreboard">
+            <button id="Rock" class="rpsButton">Rock</button>
+            <button id="Paper"class="rpsButton">Paper</button>
+            <button id="Scissors"class="rpsButton">Scissors</button>
+            <button class="anotherGame hidden">Play again?</button>
+        </div>
         <div id="Output"></div>
     </div>
 </body>
