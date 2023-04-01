@@ -42,7 +42,7 @@ function gamesPlayedTracker (game){
     } else {
         pScore = 0;
         cScore = 0;
-        output.textContent = "You have been defeated... Pick yourself up warrior -- fight another day."
+        output.textContent = "You have been defeated...\n Pick yourself up warrior -- fight another day."
         /* Spawns the Play Again Button, and removes the RPS buttons */
         buttons.forEach(button => button.classList.toggle("hidden"));
         return

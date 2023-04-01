@@ -79,10 +79,16 @@ h2 {
     font-weight: bold;
 }
 #Output {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     background-color: orange;
     padding: 30px;
-    margin: auto;
+    height: 100px;
+    width: 80vw;
+    max-width: 800px;
     border-radius: 1em;
-    text-align: center;
     font-size: 36px;
+    font-weight: bold;
 }
